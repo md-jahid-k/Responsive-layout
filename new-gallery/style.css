@@ -1,0 +1,38 @@
+img{
+    height: 100%;
+    width: 100%;
+}
+.row{
+    display: flex;
+    height: 400px;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+.row > div{
+    flex: 1;
+}
+.virtical-gallery img{
+    height: calc( (100% - 5px) /2);
+}
+.Squre-gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+@media screen and (max-width: 569px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .Squre-gallery{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+@media screen and (min-width: 570px) and (max-width: 700px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    }
+}
